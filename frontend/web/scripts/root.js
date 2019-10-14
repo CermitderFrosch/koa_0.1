@@ -11,37 +11,10 @@ class Root{
   //This classes' purpose is to bootstrap all js-scripts and to hold
   //a central reference to them
   constructor(){
-    //objectsList will keep track of active object instances
-    this.objectsList    = [];
     this.helper         = {};
     this.renderEngine   = {};
+    this.rootModel      = {};
     this.rootController = {};
-  }
-  
-  
-  
-  
-  
-  /*  CENTRAL COMMUNICATION METHODS */
-  
-  
-  /*  Only these methods should be used for any communication between instances */
-  receive(func, param = {}){
-    switch(func){
-      case "log":
-        var msg = param.msg;
-        this.helper.log(msg);
-        break;
-      case "getRenderEngine":
-        return this.renderEngine;
-    }
-  }
-  
-  request(target, func, param = {}){
-    switch(target){
-      case "rootController":
-        this.rootController.receive(func, param);
-    }
   }
   
   
@@ -55,21 +28,21 @@ class Root{
   init(){
     //Initialize helper object and set debug mode to "true"
     this.helper = new Helper(this, true);
-    this.objectsList.push({"object": this.helper, "status": "active"});
     
     //Initialize rendering engine 
-    this.renderEngine = new RenderEngine(this);
-    this.objectsList.push({"object": this.renderEngine, "status": "active"});
+    this.renderEngine = new RenderEngine(this);;
     
-    //Initialize main controller
+    //Initialize root model
+    this.rootModel = new RootModel(this);
+    this.rootModel.init();
+    
+    //Initialize root controller
     this.rootController = new RootController(this);
-    this.objectsList.push({"object": this.controllerMain, "status": "active"});
     
-    this.helper.log("Initialized helper, rendering engine and root controller");
-    this.helper.log(this.objectsList);
+    this.helper.log("Root: Initialized helper, rendering engine, root model and root controller.");
     
     //Set an html root element
-    this.helper.log("Initialize view via root controller");
-    this.request("rootController", "init");
+    this.helper.log("Initialize view via root controller.");
+    this.rootController.init();
   }
 }

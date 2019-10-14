@@ -8,6 +8,13 @@ class Helper{
     //Set debugging mode
     this.debug = debugMode;
   }
+    
+  
+  
+  
+
+  /*  OBJECT SPECIFIC METHODS       */
+  
   
   log(msg){
     if(this.debug === true){

@@ -5,30 +5,11 @@ class RenderEngine{
     //Set root class
     this.root = root;
   }
+
   
   
   
-  
-  
-  /*  CENTRAL COMMUNICATION METHODS */
-  
-  
-  /*  Only these methods should be used for any communication between instances */
-  receive(func, param = {}){
-    switch(func){
-      case "render":
-        return this.render(param);
-    }
-  }
-  
-  request(target, func, param = {}){
-   
-  }
-  
-  
-  
-  
-  
+    
   /*  OBJECT SPECIFIC METHODS       */
   
   
@@ -36,15 +17,46 @@ class RenderEngine{
     switch(node.elem){
       case "root":
         return this.createRootNode();
+      case "css":
+        return this.createStyleNode(node.content);
     }
   }
   
   createRootNode(){
+    this.root.helper.log("Render Engine: Rendering root node");
     let root = document.createElement("div");
     root.setAttribute("id", "root-node");
     
     let parent = document.getElementsByTagName("body");
     return {"parent": parent[0], "node": root};
+  }
+  
+  createStyleNode(desc){
+    this.root.helper.log("Render Engine: Rendering style node for: " + desc.id_value );
+    var node = document.createElement("style");
+    node.setAttribute("type", "text/css");
+    
+    var content = '';
+    
+    //Identify type of html element (class, id, tag, etc.)
+    switch(desc.identify){
+      case "tag":
+        content += desc.id_value + '{';
+        break;
+      case "id":
+        content += '#' + desc.id_value + '{';
+        break;
+    }
+    //Assign style properties
+    for(let i = 0; i < desc.props.length; i++){
+      content += desc.props[i].attr + ': ' + desc.props[i].value + '; ';
+    }
+    
+    content += '}';
+    
+    let style = document.createTextNode(content);
+    node.append(style);
+    return node;
   }
   
 }

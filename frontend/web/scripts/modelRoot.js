@@ -35,6 +35,7 @@ class RootModel{
           "props": [
             { "attr": "width", "value": "100%" },
             { "attr": "height", "value": "100%" },
+            { "attr": "font-family", "value": "Avenir" }
           ]
         },
         {
@@ -43,7 +44,7 @@ class RootModel{
           "props": [
             { "attr": "width", "value": "100%" },
             { "attr": "height", "value": "100%" },
-            { "attr": "margin", "value": "0px" },
+            { "attr": "margin", "value": "0px" }
           ]
         },
         {
@@ -52,11 +53,52 @@ class RootModel{
           "props": [
             { "attr": "width", "value": "100%" },
             { "attr": "height", "value": "100%" },
+            { "attr": "position", "value": "relative" }
+          ]
+        },
+        {
+          "identify": "tag",
+          "id_value": "p",
+          "props": [
+            { "attr": "display", "value": "inline-block" },
+            { "attr": "margin-right", "value": "65px" },
+            { "attr": "font-size", "value": "16px" }
+          ]
+        },
+        {
+          "identify": "class",
+          "id_value": "page",
+          "props": [
+            { "attr": "width", "value": "100%" },
+            { "attr": "height", "value": "100%" }
+          ]
+        },
+        {
+          "identify": "class",
+          "id_value": "view",
+          "props": [
+            { "attr": "width", "value": "100%" },
+            { "attr": "height", "value": "100%" }
+          ]
+        },
+        {
+          "identify": "class",
+          "id_value": "view-container",
+          "props": [
+            { "attr": "width", "value": "100%" },
+            { "attr": "height", "value": "100%" }
           ]
         }
       ]
     };//EOD: root CSS
     this.rootCSS = css;
     this.root.helper.log("Root Model: Root css config received.");
+  }
+  
+  loadPage(id){
+    //Request a page via its id from the backend
+    
+    //DUMMY: For now, we will only load the "standard_start" page
+    return standardStart;
   }
 }

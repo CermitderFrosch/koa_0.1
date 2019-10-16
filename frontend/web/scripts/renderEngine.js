@@ -96,6 +96,16 @@ class RenderEngine{
         node = document.createElement("p");
         node.innerHTML = desc.content;
         return node;
+      case "button":
+        node = document.createElement("button");
+        if(desc.class != ""){
+          node.classList.add(desc.class);
+        }
+        node.setAttribute("id", desc.id);
+        for( let i = 0; i < desc.content.length; i++){
+          node.append(this.createNode(desc.content[i]));
+        }
+        return node;
     }
   }
   

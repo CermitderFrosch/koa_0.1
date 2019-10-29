@@ -36,7 +36,7 @@ var standardStart = {
         "identify": "class",
         "id_value": "main-content-container",
         "props": [
-          { "attr": "position", "value": "absolute" },
+          { "attr": "position", "value": "relative" },
           { "attr": "left", "value": "15%" },
           { "attr": "top", "value": "30%" },
           { "attr": "width", "value": "80%" }
@@ -130,6 +130,32 @@ var standardStart = {
           { "attr": "font-size", "value": "30px" },
           { "attr": "margin-right", "value": "0px" }
         ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v1",
+        "props": [
+          { "attr": "position", "value": "relative" },
+          { "attr": "left", "value": "10%" },
+          { "attr": "top", "value": "10%" },
+          { "attr": "width", "value": "80%" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v1 > .text-main",
+        "props": [
+          { "attr": "position", "value": "relative"},
+          { "attr": "width", "value": "50%" },
+          { "attr": "left", "value": "25%" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v1 > .text-main > p",
+        "props": [
+          { "attr": "font-size", "value": "42px" },
+        ]
       }
     ]
   },
@@ -215,5 +241,29 @@ var standardStart = {
           }
         ]
       }]
-  }],
+    },
+    {
+      "view_id": 1,
+      "order": 1,
+      "elements": [{
+        "type": "div",
+        "class": "view-container",
+        //Individual view ID!
+        "id": "standard_start_v1",
+        "children":[{
+            "type": "div",
+            "class": "main-content-container_v1",
+            "id": "",
+            "children":[{
+              "type": "div",
+              "class": "text-main",
+              "id": "",
+              children:[{
+                "type": "p",
+                "content": "Due to its remote location the school and instructors suffered serious neglect over the years since it was founded, leaving the kids of the 36 inhabitant families of Gili Asahan with very poor educational conditions."
+              }]
+          }]
+        }]
+      }]
+    }],
 }

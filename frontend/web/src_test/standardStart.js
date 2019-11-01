@@ -155,6 +155,85 @@ var standardStart = {
         "id_value": "main-content-container_v1 > .text-main > p",
         "props": [
           { "attr": "font-size", "value": "42px" },
+          { "attr": "margin", "value": "0px" },
+          { "attr": "text-align", "value": "center" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v1 > .text-main > p > m",
+        "props": [
+          { "attr": "color", "value": "blue" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v1 > .img-container",
+        "props": [
+          { "attr": "position", "value": "relative" },
+          { "attr": "width", "value": "80%" },
+          { "attr": "top", "value": "100px" },
+          { "attr": "min-height", "value": "450px" },
+          { "attr": "left", "value": "calc((100% - 1400px)/2)" }
+        ]
+      },
+      {
+        "identify": "id",
+        "id_value": "v1-img-1",
+        "props": [
+          { "attr": "position", "value": "absolute" },
+          { "attr": "width", "value": "500px" },
+          { "attr": "height", "value": "400px" },
+          { "attr": "background-color", "value": "black" }
+        ]
+      },
+      {
+        "identify": "id",
+        "id_value": "v1-img-2",
+        "props": [
+          { "attr": "position", "value": "absolute" },
+          { "attr": "width", "value": "500px" },
+          { "attr": "height", "value": "300px" },
+          { "attr": "top", "value": "120px" },
+          { "attr": "left", "value": "450px" },
+          { "attr": "background-color", "value": "grey" },
+          { "attr": "z-index", "value": "1" }
+        ]
+      },
+      {
+        "identify": "id",
+        "id_value": "v1-img-3",
+        "props": [
+          { "attr": "position", "value": "absolute" },
+          { "attr": "width", "value": "500px" },
+          { "attr": "height", "value": "400px" },
+          { "attr": "left", "value": "900px" },
+          { "attr": "background-color", "value": "blue" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v1 > .info-container",
+        "props": [
+          { "attr": "position", "value": "relative" },
+          { "attr": "top", "value": "200px" },
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v1 > .info-container > h1",
+        "props": [
+          { "attr": "font-size", "value": "60px" },
+          { "attr": "text-align", "value": "center" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v1 > .info-container > .detail-container",
+        "props": [
+          { "attr": "position", "value": "relative" },
+          { "attr": "display", "value": "flex" },
+          { "attr": "flex-direction", "value": "horizontal" }
         ]
       }
     ]
@@ -258,12 +337,63 @@ var standardStart = {
               "type": "div",
               "class": "text-main",
               "id": "",
-              children:[{
+              "children":[{
                 "type": "p",
-                "content": "Due to its remote location the school and instructors suffered serious neglect over the years since it was founded, leaving the kids of the 36 inhabitant families of Gili Asahan with very poor educational conditions."
+                "content": "Due to its remote location the school and instructors suffered serious neglect over the years since it was founded, <m>leaving the kids of the 36 inhabitant families of Gili Asahan with very poor educational conditions.</m>"
               }]
+            },
+            {
+              "type": "div",
+              "class": "img-container",
+              "id": "",
+              "children": [{
+                "type": "div",
+                "class": "img",
+                "id": "v1-img-1",
+                "children": []
+              },
+              {
+                "type": "div",
+                "class": "img",
+                "id": "v1-img-2",
+                "children": []
+              },
+                          {
+                "type": "div",
+                "class": "img",
+                "id": "v1-img-3",
+                "children": []
+              }]
+            },
+            {
+              "type": "div",
+              "class": "info-container",
+              "id": "",
+              "children": [{
+                "type": "h1",
+                "class": "",
+                "id": "",
+                "content": "What we do"
+              },
+              {
+                "type": "div",
+                "class": "detail-container",
+                "id": "",
+                "children": [{
+                  "type": "ul",
+                  "class": "",
+                  "id": "",
+                  "elements": ["Pay the salary of 2 teachers", "Pay the teachers transport to the island", "Support 3 kids who go to school on the mainland", "Weekly beach cleanups", "Movie night every Saturday"]
+                },
+                {
+                  "type": "ul",
+                  "class": "",
+                  "id": "",
+                  "elements": ["Buy material for the school", "Repair the school structure", "Provide medicine for the kids"]
+                }]
+              }]
+            }]
           }]
         }]
-      }]
-    }],
+      }],
 }

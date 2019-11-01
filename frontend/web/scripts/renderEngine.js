@@ -106,6 +106,26 @@ class RenderEngine{
           node.append(this.createNode(desc.content[i]));
         }
         return node;
+      case "h1":
+        node = document.createElement("h1");
+        if(desc.class != ""){
+          node.classList.add(desc.class);
+        }
+        node.setAttribute("id", desc.id);
+        node.innerHTML = desc.content;
+        return node;
+      case "ul":
+        node = document.createElement("ul");
+        if(desc.class != ""){
+          node.classList.add(desc.class);
+        }
+        node.setAttribute("id", desc.id);
+        for(let i = 0; i < desc.elements.length; i++){
+          let list_node = document.createElement("li");
+          list_node.innerHTML = desc.elements[i];
+          node.append(list_node);
+        }
+        return node;
     }
   }
   

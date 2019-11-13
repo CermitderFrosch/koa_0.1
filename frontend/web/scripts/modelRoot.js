@@ -53,7 +53,7 @@ class RootModel{
           "props": [
             { "attr": "width", "value": "100%" },
             { "attr": "height", "value": "100%" },
-            { "attr": "position", "value": "relative" }
+            //{ "attr": "position", "value": "relative" },
           ]
         },
         {
@@ -77,8 +77,12 @@ class RootModel{
           "identify": "class",
           "id_value": "view",
           "props": [
+            //{ "attr": "position", "value": "relative" },
             { "attr": "width", "value": "100%" },
-            { "attr": "height", "value": "100%" }
+            { "attr": "display", "value": "flex" },
+            { "attr": "flex-direction", "value": "column" },
+            //{ "attr": "height", "value": "auto" },
+            { "attr": "min-height", "value": "100%" }
           ]
         },
         {
@@ -86,7 +90,11 @@ class RootModel{
           "id_value": "view-container",
           "props": [
             { "attr": "width", "value": "100%" },
-            { "attr": "height", "value": "100%" }
+            { "attr": "position", "value": "relative" },
+            //{ "attr": "height", "value": "100%" },
+            { "attr": "flex-grow", "value": "1" },
+            //{ "attr": "height", "value": "auto" },
+            //{ "attr": "min-height", "value": "100%" }
           ]
         }
       ]

@@ -13,7 +13,7 @@ var standardStart = {
         //Individual view ID!
         "id_value": "standard_start_v0",
         "props": [
-          { "attr": "background", "value": "rgba(185, 188, 195, 0.6)" },
+          { "attr": "background", "value": "rgba(185, 188, 195, 0.6)" }
         ]
       },
       {
@@ -36,10 +36,11 @@ var standardStart = {
         "identify": "class",
         "id_value": "main-content-container",
         "props": [
-          { "attr": "position", "value": "relative" },
+          { "attr": "position", "value": "absolute" },
           { "attr": "left", "value": "15%" },
           { "attr": "top", "value": "30%" },
-          { "attr": "width", "value": "80%" }
+          { "attr": "width", "value": "80%" },
+          //{ "attr": "height", "value": "auto" }
         ]
       },
       {
@@ -47,7 +48,7 @@ var standardStart = {
         "id_value": "main-content-container > .headline-sub > p",
         "props": [
           { "attr": "color", "value": "#0057FF" },
-          { "attr": "line-height", "value": "32px" },
+          { "attr": "line-height", "value": "32px" }
         ]
       },
       {
@@ -55,7 +56,7 @@ var standardStart = {
         "id_value": "main-content-container > .headline",
         "props": [
           { "attr": "height", "value": "144px" },
-          { "attr": "width", "value": "845px" },
+          { "attr": "width", "value": "845px" }
         ]
       },
       {
@@ -135,17 +136,17 @@ var standardStart = {
         "identify": "class",
         "id_value": "main-content-container_v1",
         "props": [
-          { "attr": "position", "value": "relative" },
+          { "attr": "position", "value": "absolute"},
           { "attr": "left", "value": "10%" },
-          { "attr": "top", "value": "10%" },
-          { "attr": "width", "value": "80%" }
+          { "attr": "top", "value": "50px" },
+          { "attr": "width", "value": "80%" },
         ]
       },
       {
         "identify": "class",
         "id_value": "main-content-container_v1 > .text-main",
         "props": [
-          { "attr": "position", "value": "relative"},
+          { "attr": "position", "value": "absolute"},
           { "attr": "width", "value": "50%" },
           { "attr": "left", "value": "25%" }
         ]
@@ -170,9 +171,9 @@ var standardStart = {
         "identify": "class",
         "id_value": "main-content-container_v1 > .img-container",
         "props": [
-          { "attr": "position", "value": "relative" },
+          { "attr": "position", "value": "absolute" },
           { "attr": "width", "value": "80%" },
-          { "attr": "top", "value": "100px" },
+          { "attr": "top", "value": "350px" },
           { "attr": "min-height", "value": "450px" },
           { "attr": "left", "value": "calc((100% - 1400px)/2)" }
         ]
@@ -215,8 +216,10 @@ var standardStart = {
         "identify": "class",
         "id_value": "main-content-container_v1 > .info-container",
         "props": [
-          { "attr": "position", "value": "relative" },
-          { "attr": "top", "value": "200px" },
+          { "attr": "position", "value": "absolute" },
+          { "attr": "top", "value": "800px" },
+          { "attr": "width", "value": "50%" },
+          { "attr": "left", "value": "25%" }
         ]
       },
       {
@@ -231,95 +234,125 @@ var standardStart = {
         "identify": "class",
         "id_value": "main-content-container_v1 > .info-container > .detail-container",
         "props": [
-          { "attr": "position", "value": "relative" },
+          //{ "attr": "position", "value": "absolute" },
           { "attr": "display", "value": "flex" },
-          { "attr": "flex-direction", "value": "horizontal" }
+          { "attr": "flex-direction", "value": "row" },
+          { "attr": "justify-content", "value": "space-around" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v1 > .info-container > .detail-container > .list-container",
+        "props": [
+          { "attr": "flex-grow", "value": "1" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v1 > .info-container > .detail-container > .list-container > h1",
+        "props": [
+          { "attr": "font-size", "value": "32px" },
+          { "attr": "text-decoration", "value": "none" },
+          { "attr": "font-weight", "value": "normal" },
+          { "attr": "color", "value": "#0057FF" },
+          { "attr": "text-align", "value": "center" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v1 > .info-container > .detail-container > .list-container > ul",
+        "props": [
+          { "attr": "font-size", "value": "18px" },
+          { "attr": "line-height", "value": "42px" },
+          { "attr": "color", "value": "rgba(65, 65, 65, 0.7)" },
+          { "attr": "margin-top", "value": "35px" }
         ]
       }
     ]
   },
-  "views": [{
-    //Individual view ID!
-    "view_id": 0,
-    "order": 0,
-    "elements": [{
-        "type": "div",
-        "class": "view-container",
-        //Individual view ID!
-        "id": "standard_start_v0",
-        "children":[
-          {
-            "type": "div",
-            "class": "standard-nav",
-            "id": "",
-            "children":[{
-              "type": "p",
-              "content": "Welcome"
-            },
-            {
-              "type": "p",
-              "content": "Our Mission"
-            },
-            {
-              "type": "p",
-              "content": "Donation"
-            },
-            {
-              "type": "p",
-              "content": "Contact"
-            }]
-          },
-          {
-            "type": "div",
-            "class": "main-content-container",
-            "id": "",
-            "children":[{
-              "type": "div",
-              "class": "headline-sub",
-              "id": "",
-              children:[{
-                "type": "p",
-                "content": "Kids of Asahan"
-              }]
-            },
+  "views": [
+    {
+      //Individual view ID!
+      "view_id": 0,
+      "order": 0,
+      "elements": [{
+          "type": "div",
+          "class": "view-container",
+          //Individual view ID!
+          "id": "standard_start_v0",
+          "children":[
             {
               "type": "div",
-              "class": "headline",
+              "class": "standard-nav",
               "id": "",
-              children:[{
+              "children":[{
                 "type": "p",
-                "content": "Give a gift that empowers."
+                "content": "Welcome"
               },
               {
                 "type": "p",
-                "content": "Give education."
+                "content": "Our Mission"
+              },
+              {
+                "type": "p",
+                "content": "Donation"
+              },
+              {
+                "type": "p",
+                "content": "Contact"
               }]
             },
             {
               "type": "div",
-              "class": "text",
+              "class": "main-content-container",
               "id": "",
-              children:[{
-                "type": "p",
-                "content": "Join us in our efforts to cultivate and advance the education program and school facilities of Gili Asahans public school. Every child has the right to an education."
-              }]
-            },
-            {
-              "type": "button",
-              "class": "",
-              "id": "",
-              "content":[{
-                "type": "p",
-                "content": "Support us"
+              "children":[{
+                "type": "div",
+                "class": "headline-sub",
+                "id": "",
+                children:[{
+                  "type": "p",
+                  "content": "Kids of Asahan"
+                }]
               },
               {
-                "type": "p",
-                "content": "&#8594;"
+                "type": "div",
+                "class": "headline",
+                "id": "",
+                children:[{
+                  "type": "p",
+                  "content": "Give a gift that empowers."
+                },
+                {
+                  "type": "p",
+                  "content": "Give education."
+                }]
+              },
+              {
+                "type": "div",
+                "class": "text",
+                "id": "",
+                children:[{
+                  "type": "p",
+                  "content": "Join us in our efforts to cultivate and advance the education program and school facilities of Gili Asahans public school. Every child has the right to an education."
+                }]
+              },
+              {
+                "type": "button",
+                "class": "",
+                "id": "",
+                "content":[{
+                  "type": "p",
+                  "content": "Support us"
+                },
+                {
+                  "type": "p",
+                  "content": "&#8594;"
+                }]
               }]
-            }]
-          }
-        ]
-      }]
+            }
+          ]
+        }]
     },
     {
       "view_id": 1,
@@ -380,20 +413,54 @@ var standardStart = {
                 "class": "detail-container",
                 "id": "",
                 "children": [{
-                  "type": "ul",
-                  "class": "",
+                  "type": "div",
+                  "class": "list-container",
                   "id": "",
-                  "elements": ["Pay the salary of 2 teachers", "Pay the teachers transport to the island", "Support 3 kids who go to school on the mainland", "Weekly beach cleanups", "Movie night every Saturday"]
+                  "children": [{
+                    "type": "h1",
+                    "class": "",
+                    "id": "",
+                    "content": "On a monthly basis"
+                  },
+                  {
+                    "type": "ul",
+                    "class": "",
+                    "id": "",
+                    "elements": ["Pay the salary of 2 teachers", "Pay the teachers transport to the island", "Support 3 kids who go to school on the mainland", "Weekly beach cleanups", "Movie night every Saturday"]
+                  }]
                 },
                 {
-                  "type": "ul",
-                  "class": "",
+                  "type": "div",
+                  "class": "list-container",
                   "id": "",
-                  "elements": ["Buy material for the school", "Repair the school structure", "Provide medicine for the kids"]
+                  "children": [{
+                    "type": "h1",
+                    "class": "",
+                    "id": "",
+                    "content": "Occasionally"
+                  },
+                  {
+                    "type": "ul",
+                    "class": "",
+                    "id": "",
+                    "elements": ["Buy material for the school", "Repair the school structure", "Provide medicine for the kids"]
+                  }]
                 }]
               }]
             }]
           }]
         }]
-      }],
+    },
+    {
+      //Individual view ID!
+      "view_id": 2,
+      "order": 2,
+      "elements": [{
+          "type": "div",
+          "class": "view-container",
+          //Individual view ID!
+          "id": "standard_start_v1",
+          "children":[]
+        }]
+    }],
 }

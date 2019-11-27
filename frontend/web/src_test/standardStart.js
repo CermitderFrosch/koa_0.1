@@ -267,6 +267,116 @@ var standardStart = {
           { "attr": "color", "value": "rgba(65, 65, 65, 0.7)" },
           { "attr": "margin-top", "value": "35px" }
         ]
+      },
+      {
+        "identify": "id",
+        "id_value": "standard_start_v2 > .img-container",
+        "props": [
+          { "attr": "position", "value": "absolute" },
+          { "attr": "height", "value": "700px" },
+          { "attr": "width", "value": "800px" },
+          { "attr": "background-color", "value": "#d9d9d9" },
+          { "attr": "top", "value": "20%" },
+          { "attr": "left", "value": "23%" },
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v2",
+        "props": [
+          { "attr": "position", "value": "absolute"},
+          { "attr": "left", "value": "45%" },
+          { "attr": "top", "value": "30%" },
+          { "attr": "width", "value": "80%" },
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v2 > .trigger > p",
+        "props": [
+          { "attr": "color", "value": "#0057FF" },
+          { "attr": "line-height", "value": "32px" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v2 > .text-main",
+        "props": [
+          { "attr": "max-width", "value": "750px" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v2 > .text-main > p",
+        "props": [
+          { "attr": "line-height", "value": "72px" },
+          { "attr": "font-size", "value": "58px" },
+          { "attr": "margin", "value": "0px" },
+          { "attr": "color", "value": "#414141" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v2 > .text-sub",
+        "props": [
+          { "attr": "margin-top", "value": "20px" },
+          { "attr": "max-width", "value": "750px" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v2 > .text-sub > p",
+        "props": [
+          { "attr": "line-height", "value": "32px" },
+          { "attr": "font-size", "value": "18px" },
+          { "attr": "margin", "value": "0px" },
+          { "attr": "color", "value": "#414141" },
+          { "attr": "opacity", "value": "0.7" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v2 > button",
+        "props": [
+          { "attr": "width", "value": "300px" },
+          { "attr": "height", "value": "50px" },
+          { "attr": "border", "value": "2px solid #414141" },
+          { "attr": "box-sizing", "value": "border-box" },
+          { "attr": "border-radius", "value": "200px" },
+          { "attr": "margin-top", "value": "40px" },
+          { "attr": "background-color", "value": "rgba(0,0,0,0)" },
+          { "attr": "letter-spacing", "value": "0.02em" },
+          { "attr": "font-size", "value": "16px" },
+          { "attr": "text-align", "value": "left" },
+          { "attr": "position", "value": "relative" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v2 > button:hover",
+        "props": [
+          { "attr": "color", "value": "white" },
+          { "attr": "background-color", "value": "#414141" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v2 > button > p",
+        "props": [
+          { "attr": "position", "value": "absolute" },
+          { "attr": "top", "value": "-2px" },
+          { "attr": "left", "value": "25px" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v2 > button > p:nth-child(2)",
+        "props": [
+          { "attr": "left", "value": "230px" },
+          { "attr": "top", "value": "-25px" },
+          { "attr": "font-size", "value": "30px" },
+          { "attr": "margin-right", "value": "0px" }
+        ]
       }
     ]
   },
@@ -459,8 +569,58 @@ var standardStart = {
           "type": "div",
           "class": "view-container",
           //Individual view ID!
-          "id": "standard_start_v1",
-          "children":[]
-        }]
-    }],
+          "id": "standard_start_v2",
+          "children":[{
+            "type": "div",
+            "class": "img-container",
+            "id": "",
+            "children":[]
+          },
+          {
+            "type": "div",
+            "class": "main-content-container_v2",
+            "id": "",
+            "children":[{
+              "type": "div",
+              "class": "trigger",
+              "id": "",
+              "children":[{
+                "type": "p",
+                "content": "Take part"
+              }]
+            },
+            {
+              "type": "div",
+              "class": "text-main",
+              "id": "",
+              "children":[{
+                "type": "p",
+                "content": "Support the Kids of Asahan project"
+              }]
+            },
+            {
+              "type": "div",
+              "class": "text-sub",
+              "id": "",
+              "children":[{
+                "type": "p",
+                "content": "This project supports education programm in the village of Gili Asahan in Indonesia. Funds provide transportation for teacher, uniforms, books, and other school supplies."
+              }]
+            },
+            {
+              "type": "button",
+              "class": "",
+              "id": "",
+              "content":[{
+                "type": "p",
+                "content": "Donate now"
+              },
+              {
+                "type": "p",
+                "content": "&#8594;"
+              }]
+            }]
+          }]
+      }]
+    }]
 }

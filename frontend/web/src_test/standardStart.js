@@ -277,7 +277,7 @@ var standardStart = {
           { "attr": "width", "value": "800px" },
           { "attr": "background-color", "value": "#d9d9d9" },
           { "attr": "top", "value": "20%" },
-          { "attr": "left", "value": "23%" },
+          { "attr": "right", "value": "45%" },
         ]
       },
       {
@@ -285,9 +285,9 @@ var standardStart = {
         "id_value": "main-content-container_v2",
         "props": [
           { "attr": "position", "value": "absolute"},
-          { "attr": "left", "value": "45%" },
+          { "attr": "left", "value": "50%" },
           { "attr": "top", "value": "30%" },
-          { "attr": "width", "value": "80%" },
+          { "attr": "width", "value": "50%" },
         ]
       },
       {
@@ -376,6 +376,18 @@ var standardStart = {
           { "attr": "top", "value": "-25px" },
           { "attr": "font-size", "value": "30px" },
           { "attr": "margin-right", "value": "0px" }
+        ]
+      },
+      {
+        "identify": "id",
+        "id_value": "standard_start_v3 > .img-container",
+        "props": [
+          { "attr": "position", "value": "absolute" },
+          { "attr": "height", "value": "800px" },
+          { "attr": "width", "value": "1500px" },
+          { "attr": "background-color", "value": "#d9d9d9" },
+          { "attr": "top", "value": "20%" },
+          { "attr": "left", "value": "calc( 50% - 750px)" }
         ]
       }
     ]
@@ -620,6 +632,23 @@ var standardStart = {
                 "content": "&#8594;"
               }]
             }]
+          }]
+      }]
+    },
+  {
+      //Individual view ID!
+      "view_id": 3,
+      "order": 3,
+      "elements": [{
+          "type": "div",
+          "class": "view-container",
+          //Individual view ID!
+          "id": "standard_start_v3",
+          "children":[{
+            "type": "div",
+            "class": "img-container",
+            "id": "",
+            "children":[]
           }]
       }]
     }]

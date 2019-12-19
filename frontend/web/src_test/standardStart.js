@@ -389,6 +389,42 @@ var standardStart = {
           { "attr": "top", "value": "20%" },
           { "attr": "left", "value": "calc( 50% - 750px)" }
         ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v4",
+        "props": [
+          { "attr": "position", "value": "absolute"},
+          { "attr": "display", "value": "flex"},
+          { "attr": "left", "value": "15%" },
+          { "attr": "top", "value": "30%" },
+          { "attr": "width", "value": "70%" },
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v4 > .nav-container-left",
+        "props": [
+          { "attr": "height", "value": "100%" },
+          { "attr": "width", "value": "10%" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v4 > .img-container",
+        "props": [
+          { "attr": "height", "value": "600px" },
+          { "attr": "width", "value": "80%" },
+          { "attr": "background-color", "value": "blue" }
+        ]
+      },
+      {
+        "identify": "class",
+        "id_value": "main-content-container_v4 > .nav-container-right",
+        "props": [
+          { "attr": "height", "value": "100%" },
+          { "attr": "width", "value": "10%" }
+        ]
       }
     ]
   },
@@ -635,7 +671,7 @@ var standardStart = {
           }]
       }]
     },
-  {
+    {
       //Individual view ID!
       "view_id": 3,
       "order": 3,
@@ -651,5 +687,46 @@ var standardStart = {
             "children":[]
           }]
       }]
-    }]
+    },
+    {
+      //Individual view ID!
+      "view_id": 4,
+      "order": 4,
+      "elements": [{
+          "type": "div",
+          "class": "view-container",
+          //Individual view ID!
+          "id": "standard_start_v4",
+          "children":[{
+            "type": "div",
+            "class": "main-content-container_v4",
+            "id": "",
+            "children":[{
+              "type": "div",
+              "class": "nav-container-left",
+              "id": "",
+              "children":[{
+                "type": "p",
+                "content": "&#8594;"
+              }]
+            },
+            {
+              "type": "div",
+              "class": "img-container",
+              "id": "",
+              "children":[]
+            },
+            {
+              "type": "div",
+              "class": "nav-container-right",
+              "id": "",
+              "children":[{
+                "type": "p",
+                "content": "&#8594;"
+              }]
+            }]
+          }]
+      }]
+    }
+  ]
 }
